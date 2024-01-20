@@ -1,0 +1,209 @@
+﻿*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.logo{
+    color:#ff0000;
+    top:40px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+body {
+    background: #000000;
+    font-family: 'Flamenco', cursive;
+}
+.heading{
+    text-align:center;
+    background:#fff;
+    color:#ff0000;
+
+
+}
+.naviagation{
+    top:0px;
+    text-align:right;
+}
+
+.naviagation a{
+    top:0;
+    right:0;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    color: #ff0000;
+}
+
+.naviagation a:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 3px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s;
+}
+
+.naviagation a:hover:after {
+        transform-origin: left;
+        transform: scaleX(1);
+}
+
+.naviagation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ff0000;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.naviagation .btnLogin-popup:hover {
+        background: #fff;
+        color: #162938;
+}
+.naviagation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.naviagation .btnLogin-popup:hover {
+        background: #fff;
+        color: #162938;
+}
+.team{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:radial-gradient(#281c3e,#0f051d);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.team-content{
+    width:100%;
+    max-width:1350px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,auto));
+    align-items:center;
+    gap:2rem;
+    text-align:center;
+    margin-top:4rem;
+
+}
+.team-content img{
+    width:100%;
+    height:auto;
+}
+.team-content a{
+    position:relative;
+    text-decoration:none;
+    color:#ff0000;
+}
+.team-content a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.team-content a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.box{
+    padding:16px;
+    background:#1b1229;
+    border-radius:15px;
+    transition:all .3s ease;
+}
+.box:hover{
+    transform:translateY(-10px);
+    cursor:pointer;
+}
+.icon{
+    display:none;
+}
+@media (max-width:1240px){
+    .team{
+        width:100%;
+        height:auto;
+        padding:90px 2%;
+    }
+    .center h1{
+        font-size:3.2rem;
+    }
+    .naviagation {
+        width: 100%;
+        padding: 0 2%;
+    }
+}
+@media only screen and (max-width:778px) {
+    .naviagation{
+        display: none;
+    }
+
+    .icon {
+        display: inline-block;
+        color: #ff0000;
+        float: right;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+
+    .naviagation {
+        float: left;
+    }
+
+        .naviagation a {
+            display: block;
+            margin-top: 10px;
+        }
+}
+
+

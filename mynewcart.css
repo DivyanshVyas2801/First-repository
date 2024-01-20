@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .container
+  {
+  display:grid;
+  grid-template-areas: 
+  'navi navi navi navi'
+  'logo nav nav btn1'
+  'heading heading heading heading'
+  'table table total total';
+  }
+  #navi
+  {
+      grid-area:navi;
+  }
+  #logo
+  {
+      grid-area: logo;
+  }
+  #nav
+  {
+      grid-area:nav;
+  }
+  #heading
+  {
+      grid-area:heading;
+  }
+  #table
+  {
+      grid-area:table;
+  }
+  #total
+  {
+      grid-area:total;
+  }
+  .navbar
+  {
+      width:100%;
+      height:600px;
+      margin:auto;
+      background-size: cover;
+      background-position: center;
+      display:flex;
+     
+  }
+  .icon
+  {
+      width:200px;
+      height:70px;
+      float:left;
+  }
+  .logo
+  {
+      color:rgb(243, 35, 70);
+      font-size:35px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding-left:20px;
+      float:left;
+      padding-top:20px;
+  
+  }
+  .menu
+  {
+      width:100%;
+      float:left;
+      height:80px;
+      position: fixed;
+      z-index: 10;
+      background: rgba(12,11,9,0.6);
+     
+  }
+  .ul
+  {
+      float:left;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .navbar ul li
+  {
+      list-style:none;
+      display: inline-block;
+      font-size: 26px;
+      margin-left:35px;
+      margin-top:27px;
+      position:relative;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .navbar ul li a
+  {
+      text-decoration: none;
+      color:white;
+      text-transform:capitalize;
+  }
+  .navbar ul li::after
+  {
+      content:'';
+      height:3px;
+      width:0;
+      color:rgb(243, 35, 70);
+      background:white;
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      transition: 0.5s;
+  }
+  .navbar ul li:hover::after
+  {
+      width:100%;
+  }
+  ul ul
+  {
+      position:absolute;
+      display:none;
+      margin-left: -60px;
+  }
+  ul li:hover>ul
+  {
+      display:block;
+      background: transparent;
+  }
+  .btn-cart{
+      padding:10px;
+      background-color: rgb(243, 35, 70);
+      font-size:20px;
+      color:white;
+      border:0;
+      outline:0; 
+      border-radius:5px;
+      margin-left:30px;   
+  
+  }
+  .btn-cart:hover
+  {
+      color:rgb(243, 35, 70);
+      background-color: white;
+      border:1px solid rgb(243, 35, 70);
+      transition: 0.5s ease;
+  }
+  .btn-cart.ion-icon
+  {
+  margin-left: 10px;
+  }
+  .cart-count
+  {
+      position: absolute;
+      background-color: white;
+      color:rgb(243, 35, 70);
+      text-align: center;
+      top:8px;
+      right:523px;
+      height:30px;
+      width:30px;
+      padding:3px;
+      line-height: 25px;
+      border-radius: 50%;
+      font-weight: 600;
+      z-index:10;
+  }
+  .search
+  {
+      top:0px;
+      right:0px;
+      width:300px;
+     float:left;
+      margin-left:910px;
+      margin-top:-57px;
+  }
+  .srch
+  {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+      width:200px;
+      height:40px;
+      background: transparent;
+      margin-top: 17px;
+      color:white;
+      border-right: none;
+      font-size: 16px;
+      float:left;
+      padding:10px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      border: 2px solid white;
+  }
+  .btn
+  {
+      width:100px;
+      height:40px;
+      background:rgb(243, 35, 70);
+      border:2px solid white;
+      margin-top:16px;
+      color:white;
+      font-size:15px;
+      border-bottom-right-radius: 5px;
+  }
+  .btn:focus
+  {
+      outline:none;
+  }
+  .srch:focus
+  {
+      outline:none;
+  }
+  .heading
+{
+    width:50%;
+    background-color:rgb(243, 35, 70);
+    height:50px;
+    margin-top:120px;
+    position:absolute;
+    text-align: center;
+    margin-left:340px;
+    border-radius:20px;
+    box-shadow: 0 0 10px 0 grey;
+}
+.heading h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.table
+{
+    width:100%;
+    margin-left:80px;  
+    margin-top: -280px;
+    
+}
+.table th
+{
+   height:70px;
+   font-size: 20px;
+   color:rgb(243, 35, 70);
+   text-align: center;
+}
+.table td
+{
+   text-align: center;
+   height:70px;
+   font-size: 20px;
+   text-align: center;
+}
+.table td select{
+    height:10px;
+    width:15px;
+}
+.table th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  .total
+  {
+    display:inline-block;
+    border:1px solid grey;
+    background-color: rgb(243, 35, 70);
+    height:150px;
+    width:300px;
+    margin-top:-160px;
+    color:white;
+    font-size: 20px;
+    border:2px solid white;
+    border-radius: 10px;
+    margin-left:80px;
+  }
+  .total h5
+  {
+    text-align: right;
+    margin-right:20px;
+    font-size: 30px;
+    margin-top:-33px;
+  }
+  .total h4
+  {
+    font-size: 30px;
+    margin-left:20px;
+    margin-top:8px;
+  }
+  .btn-purchase
+  {
+    width:100%;
+    height:40px;
+    background-color: white;
+    border-radius:10px;
+    font-size:25px;
+    color:rgb(243, 35, 70);
+    margin-top:30px;
+    border:2px solid rgb(243, 35, 70);
+ 
+  }
+  .form-check
+  {
+    margin-top:15px;
+    margin-left:9px;
+  }
+  
